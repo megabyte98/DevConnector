@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Redirect } from "react-router-dom"
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import Footer from "../layout/Footer"
 
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
@@ -26,7 +27,9 @@ const Landing = ({ isAuthenticated }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
+
   );
 };
 
