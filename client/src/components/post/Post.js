@@ -19,10 +19,13 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
     ) : (
             <Fragment>
                 <Link to='/posts' className='btn'>
-                    Back To Posts
-      </Link>
+                    Back To Posts</Link>
+                <br/>
+                <br/>
                 <PostItem post={post} showActions={false} />
+                <br/>
                 <CommentForm postId={post._id} />
+                <br/>
                 <div className='comments'>
                     {post.comments.map(comment => (
                         <CommentItem key={comment._id} comment={comment} postId={post._id} />
@@ -31,6 +34,8 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
             </Fragment>
         );
 };
+
+
 
 Post.propTypes = {
     getPost: PropTypes.func.isRequired,
