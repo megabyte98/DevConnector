@@ -494,11 +494,14 @@ button {
   font-size: 0.8rem;
 }
 
+
+
 .post .post-date {
   color: #aaa;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
+
 
 /* Mobile Styles */
 @media (max-width: 700px) {

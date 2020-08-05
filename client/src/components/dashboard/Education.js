@@ -22,7 +22,7 @@ const Education = ({ education, deleteEducation }) => {
     ));
     return (
         <Fragment>
-            <h2 className="my-2">Education Credentials </h2>
+            <h2  style = {exp_style} className="my-2">Education Credentials </h2>
             <table className="table">
                 <thead>
                     <tr>
@@ -42,5 +42,12 @@ Education.propTypes = {
     education: PropTypes.array.isRequired,
     deleteEducation: PropTypes.func.isRequired
 }
+
+const exp_style = {
+    fontFamily:'Merriweather',
+    fontSize:'24px',
+    fontWeight:'350'
+}
+
 
 export default connect(null, { deleteEducation })(Education)
