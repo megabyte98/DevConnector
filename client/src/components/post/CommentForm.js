@@ -9,7 +9,10 @@ const CommentForm = ({ postId, addComment }) => {
     return (
         <div className='post-form'>
             <div className='bg-primary p'>
-                <h3>Leave a Comment</h3>
+                <h3 style={{fontFamily:'Merriweather', 
+                fontSize:'20px', display:'flex',justifyContent:'center'
+                }}>
+                Leave a Comment</h3>
             </div>
             <form
                 className='form my-1'
@@ -22,6 +25,7 @@ const CommentForm = ({ postId, addComment }) => {
                 <textarea
                     name='text'
                     cols='30'
+                    style={textArea_style}
                     rows='5'
                     placeholder='Comment the post'
                     value={text}
@@ -33,6 +37,17 @@ const CommentForm = ({ postId, addComment }) => {
         </div>
     );
 };
+
+const textArea_style = {
+    width:'100%',
+    outline:'none',
+    border:'2px solid black',
+    decoration:'none',
+    boxShadow:'3px 3px 3px 3px black',
+    marginBottom:'2rem',
+
+}
+
 
 CommentForm.propTypes = {
     addComment: PropTypes.func.isRequired

@@ -22,7 +22,7 @@ const Experience = ({ experience, deleteExperience }) => {
     ));
     return (
         <Fragment>
-            <h2 className="my-2">Experience Credentials </h2>
+            <h2 style = {exp_style} className="my-2">Experience Credentials </h2>
             <table className="table">
                 <thead>
                     <tr>
@@ -41,6 +41,12 @@ const Experience = ({ experience, deleteExperience }) => {
 Experience.propTypes = {
     experience: PropTypes.array.isRequired,
     deleteExperience: PropTypes.func.isRequired,
+}
+
+const exp_style = {
+    fontFamily:'Merriweather',
+    fontSize:'24px',
+    fontWeight:'350'
 }
 
 export default connect(null, { deleteExperience })(Experience)

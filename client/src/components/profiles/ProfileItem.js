@@ -11,7 +11,7 @@ const ProfileItem = ({ profile: {
     skills
 } }) => {
     return (
-        <div className="profile bg-light">
+        <div style={card_style} className="profile">
             <img src={avatar} alt="" className="round-img" />
             <div>
                 <h2>{name}</h2>
@@ -19,10 +19,10 @@ const ProfileItem = ({ profile: {
                 <p className="my-1">{location && <span>{location}</span>}</p>
                 <Link to={`/profile/${_id}`} className="btn btn-primary">View Profile</Link>
             </div>
-            <ul>
+            <ul style={{listStyle:'circle'}} >
                 {skills.slice(0, 4).map((skill, index) => (
-                    <li key={index} className="text-primary">
-                        <i className="fas fa-check" />{skill}
+                    <li  key={index} >
+                        {skill}
                     </li>
                 ))}
             </ul>
@@ -32,6 +32,16 @@ const ProfileItem = ({ profile: {
 
 ProfileItem.propTypes = {
     profile: PropTypes.object.isRequired,
+}
+
+const card_style = {
+    marginRight:'3rem',
+    marginBottom:'4rem',
+    border:'1px solid black',
+    boxShadow:'2px 3px 3px 3px black',
+    background:'#151B54',
+    padding:'1rem 1rem',
+    color:'white',
 }
 
 export default ProfileItem
